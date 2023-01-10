@@ -19,10 +19,12 @@ module.exports = () => {
         template: './index.html',
         title: 'JATE'
       }),
+      // Puts work from src-sw.js file
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
+      // Creates manifest.json
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
